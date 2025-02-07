@@ -34,9 +34,6 @@ UUID=07956823-71e6-4573-8319-2e8f2fa9baf4 none            swap    sw            
 #LABEL=BTRFS_RAID_BACKUP /mnt/offline_backup btrfs noauto,rw,relatime,compress=zstd,autodefrag,nofail 0 0
 LABEL=BTRFS_RAID_BACKUP /mnt/raid_backup btrfs noauto,rw,relatime,compress=zstd,autodefrag,nofail 0 0
 
-# WD RED 4TB #1
-#UUID=453ccc0d-2f99-44a5-9f75-a8e097b26a7c /mnt/disks/WD_RED_4TB_01  btrfs rw,relatime,compress=zstd,autodefrag,nofail 0 0
-#UUID=453ccc0d-2f99-44a5-9f75-a8e097b26a7c /mnt/timemachine btrfs rw,relatime,subvol=/@timemachine,compress=zstd,autodefrag,nofail 0 0
 
 # WD RED 4TB 02
 UUID=611f9b40-773a-4fc1-82a0-9e104924fee7 /mnt/disks/WD_RED_4TB_02 btrfs rw,relatime,compress=zstd,autodefrag,nofail 0 0 
@@ -46,6 +43,7 @@ UUID=611f9b40-773a-4fc1-82a0-9e104924fee7 /mnt/timemachine btrfs rw,relatime,sub
 # WD RED Plus 8TB 01
 UUID=94da4fb4-77a7-4f63-9888-747b3bc428d4 /mnt/disks/WD_RED_8TB_01 btrfs rw,relatime,compress=zstd,autodefrag,nofail 0 0
 UUID=94da4fb4-77a7-4f63-9888-747b3bc428d4 /mnt/torrents btrfs rw,relatime,subvol=/@torrents,compress=zstd,autodefrag,nofail 0 0
+UUID=94da4fb4-77a7-4f63-9888-747b3bc428d4 /mnt/backups btrfs rw,relatime,subvol=/@backups,compress=zstd,autodefrag,nofail 0 0
 
 # Seagate Barracuda 8TB 01
 UUID=93939840-2d42-4530-accb-af8a170003de /mnt/disks/SG_BARR_8TB_01 btrfs rw,relatime,compress=zstd,autodefrag,nofail 0 0
@@ -58,5 +56,3 @@ UUID=591931a6-b432-4bf4-b06e-81f7dd00a356 /mnt/virtual_machines btrfs rw,relatim
 # Seagate Barracuda 8TB 03
 UUID=634f6d42-2bfa-4afd-ba76-e561fcb3dd12 /mnt/disks/SG_BARR_8TB_03 btrfs rw,relatime,compress=zstd,autodefrag,nofail 0 0
 
-# mergerfs
-#/mnt/disks/*/@public /mnt/public mergerfs cache.files=auto-full,dropcacheonclose=true,category.create=mspmfs,allow_other,fsname=mergerfs 0 0
