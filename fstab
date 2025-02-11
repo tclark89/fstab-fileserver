@@ -49,3 +49,5 @@ UUID=591931a6-b432-4bf4-b06e-81f7dd00a356 /mnt/virtual_machines btrfs rw,relatim
 # Seagate Barracuda 8TB 03
 UUID=634f6d42-2bfa-4afd-ba76-e561fcb3dd12 /mnt/disks/SG_BARR_8TB_03 btrfs rw,relatime,compress=zstd,autodefrag,nofail 0 0
 
+# MergerFS
+/mnt/disks/*/@public /mnt/public fuse.mergerfs cache.files=auto-full,dropcacheonclose=true,category.create=mspmfs,allow_other,fsname=mergerfs 0 0 
