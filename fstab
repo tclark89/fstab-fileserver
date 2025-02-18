@@ -44,7 +44,6 @@ UUID=93939840-2d42-4530-accb-af8a170003de /mnt/meagan btrfs rw,relatime,subvol=@
 
 # Segeate Barracuda 8TB 02
 UUID=591931a6-b432-4bf4-b06e-81f7dd00a356 /mnt/disks/SG_BARR_8TB_02 btrfs rw,relatime,compress=zstd,autodefrag,nofail 0 0
-UUID=591931a6-b432-4bf4-b06e-81f7dd00a356 /mnt/virtual_machines btrfs rw,relatime,subvol=/@virtual_machines,compress=zstd,autodefrag,nofail 0 0
 
 # Seagate Barracuda 8TB 03
 UUID=634f6d42-2bfa-4afd-ba76-e561fcb3dd12 /mnt/disks/SG_BARR_8TB_03 btrfs rw,relatime,compress=zstd,autodefrag,nofail 0 0
