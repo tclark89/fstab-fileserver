@@ -9,26 +9,22 @@
 #
 # <file system> <mount point>   <type>  <options>       <dump>  <pass>
 # / was on /dev/nvme0n1p2 during installation
-#UUID=e7966557-87ad-44f9-adb1-7807669c09f5 /                  btrfs   defaults,compress=lzo,subvol=@rootfs        0       0
-#UUID=e7966557-87ad-44f9-adb1-7807669c09f5 /snapshots         btrfs   defaults,compress=lzo,subvol=@snapshots     0       0
-#UUID=e7966557-87ad-44f9-adb1-7807669c09f5 /var/lib/machines  btrfs   defaults,compress=lzo,subvol=@machines      0       0
-#UUID=e7966557-87ad-44f9-adb1-7807669c09f5 /var/lib/libvirt   btrfs   defaults,compress=lzo,subvol=@libvirt       0       0
-#UUID=e7966557-87ad-44f9-adb1-7807669c09f5 /var/log           btrfs   defaults,compress=lzo,subvol=@var_log       0       0
-#UUID=e7966557-87ad-44f9-adb1-7807669c09f5 /home              btrfs   defaults,compress=lzo,subvol=@home          0       0
+UUID=e7966557-87ad-44f9-adb1-7807669c09f5 /                  btrfs   defaults,compress=lzo,subvol=@rootfs        0       0
+UUID=e7966557-87ad-44f9-adb1-7807669c09f5 /snapshots         btrfs   defaults,compress=lzo,subvol=@snapshots     0       0
+UUID=e7966557-87ad-44f9-adb1-7807669c09f5 /var/lib/machines  btrfs   defaults,compress=lzo,subvol=@machines      0       0
+UUID=e7966557-87ad-44f9-adb1-7807669c09f5 /var/lib/libvirt   btrfs   defaults,compress=lzo,subvol=@libvirt       0       0
+UUID=e7966557-87ad-44f9-adb1-7807669c09f5 /var/log           btrfs   defaults,compress=lzo,subvol=@var_log       0       0
+UUID=e7966557-87ad-44f9-adb1-7807669c09f5 /home              btrfs   defaults,compress=lzo,subvol=@home          0       0
 #UUID=e7966557-87ad-44f9-adb1-7807669c09f5 /srv/containers    btrfs   defaults,compress=lzo,subvol=@containers    0       0
-#UUID=e7966557-87ad-44f9-adb1-7807669c09f5 /srv/docker        btrfs   defaults,compress=lzo,subvol=@docker_data   0       0
-#UUID=e7966557-87ad-44f9-adb1-7807669c09f5 /mnt/drive_root    btrfs   defaults,compress=lzo,noauto                0       0
+UUID=e7966557-87ad-44f9-adb1-7807669c09f5 /srv/docker        btrfs   defaults,compress=lzo,subvol=@docker_data   0       0
+UUID=e7966557-87ad-44f9-adb1-7807669c09f5 /mnt/drive_root    btrfs   defaults,compress=lzo,noauto                0       0
 # /boot/efi was on /dev/nvme0n1p1 during installation
-#UUID=A141-B997  /boot/efi       vfat    umask=0077      0       1
+UUID=A141-B997  /boot/efi       vfat    umask=0077      0       1
 # swap was on /dev/nvme0n1p3 during installation
-#UUID=07956823-71e6-4573-8319-2e8f2fa9baf4 none            swap    sw              0       0
-#/dev/sr0        /media/cdrom0   udf,iso9660 user,noauto     0       0
+UUID=07956823-71e6-4573-8319-2e8f2fa9baf4 none            swap    sw              0       0
+/dev/sr0        /media/cdrom0   udf,iso9660 user,noauto     0       0
 
-/dev/vda1 / ext4 defaults 0 0
-/dev/vda5 swap swap defaults 0 0 
 
-/dev/vdb1 /mnt/docker btrfs rw,relatime,autodefrag,compress=lzo,subvol=/@docker 0 0
-/dev/vdb1 /mnt/snapshots btrfs rw,relatime,autodefrag,compress=lzo,subvol=/@snapshots 0 0
 
 # BTRFS RAID Backup
 LABEL=BTRFS_RAID_BACKUP /mnt/raid_backup btrfs noauto,rw,relatime,compress=zstd,autodefrag,nofail 0 0
@@ -45,6 +41,7 @@ UUID=611f9b40-773a-4fc1-82a0-9e104924fee7 /mnt/meagan btrfs rw,relatime,subvol=/
 
 # Seagate Barracuda 8TB 01
 UUID=93939840-2d42-4530-accb-af8a170003de /mnt/disks/SG_BARR_8TB_01 btrfs rw,relatime,compress=zstd,autodefrag,nofail 0 0
+#UUID=93939840-2d42-4530-accb-af8a170003de /mnt/meagan btrfs rw,relatime,subvol=@meagan,compress=zstd,autodefrag,nofail 0 0
 
 # Segeate Barracuda 8TB 02
 UUID=591931a6-b432-4bf4-b06e-81f7dd00a356 /mnt/disks/SG_BARR_8TB_02 btrfs rw,relatime,compress=zstd,autodefrag,nofail 0 0
@@ -53,4 +50,4 @@ UUID=591931a6-b432-4bf4-b06e-81f7dd00a356 /mnt/disks/SG_BARR_8TB_02 btrfs rw,rel
 UUID=634f6d42-2bfa-4afd-ba76-e561fcb3dd12 /mnt/disks/SG_BARR_8TB_03 btrfs rw,relatime,compress=zstd,autodefrag,nofail 0 0
 
 # MergerFS
-/mnt/disks/SG_BARR_8TB_01/@public:/mnt/disks/SG_BARR_8TB_02/@public:/mnt/disks/SG_BARR_8TB_03/@public /mnt/public fuse.mergerfs cache.files=auto-full,dropcacheonclose=true,category.create=mspmfs,allow_other,fsname=mergerfs 0 0 
+/mnt/disks/SG_BARR_8TB_01/@public:/mnt/disks/SG_BARR_8TB_02/@public:/mnt/disks/SG_BARR_8TB_03/@public /mnt/public fuse.mergerfs cache.files=off,dropcacheonclose=false,category.create=mspmfs,func.getattr=newest,fsname=mergerfs-public 0 0 
