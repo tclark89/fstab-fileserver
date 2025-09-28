@@ -18,10 +18,14 @@ UUID=e7966557-87ad-44f9-adb1-7807669c09f5 /home              btrfs   defaults,co
 #UUID=e7966557-87ad-44f9-adb1-7807669c09f5 /srv/containers    btrfs   defaults,compress=lzo,subvol=@containers    0       0
 UUID=e7966557-87ad-44f9-adb1-7807669c09f5 /srv/docker        btrfs   defaults,compress=lzo,subvol=@docker_data   0       0
 UUID=e7966557-87ad-44f9-adb1-7807669c09f5 /mnt/drive_root    btrfs   defaults,compress=lzo,noauto                0       0
+
 # /boot/efi was on /dev/nvme0n1p1 during installation
 UUID=A141-B997  /boot/efi       vfat    umask=0077      0       1
+
 # swap was on /dev/nvme0n1p3 during installation
 UUID=07956823-71e6-4573-8319-2e8f2fa9baf4 none            swap    sw              0       0
+/swap/swapfile none swap defaults 0 0
+
 /dev/sr0        /media/cdrom0   udf,iso9660 user,noauto     0       0
 
 
