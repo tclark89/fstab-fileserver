@@ -60,7 +60,7 @@ UUID=591931a6-b432-4bf4-b06e-81f7dd00a356 /mnt/disks/SG_BARR_8TB_02 btrfs rw,rel
 UUID=634f6d42-2bfa-4afd-ba76-e561fcb3dd12 /mnt/disks/SG_BARR_8TB_03 btrfs rw,relatime,compress=zstd,autodefrag,nofail 0 0
 
 # MergerFS
-/mnt/disks/SG_BARR_8TB_01/@public:/mnt/disks/SG_BARR_8TB_02/@public:/mnt/disks/SG_BARR_8TB_03/@public /mnt/public fuse.mergerfs cache.files=off,dropcacheonclose=false,category.create=mspmfs,func.getattr=newest,fsname=mergerfs-public 0 0 
-/mnt/disks/SG_BARR_8TB_01/@torrents:/mnt/disks/SG_BARR_8TB_02/@torrents:/mnt/disks/SG_BARR_8TB_03/@torrents:/mnt/disks/WD_RED_4TB_01/@torrents /mnt/torrents2 fuse.mergerfs cache.files=off,dropcacheonclose=false,category.create=mspmfs,func.getattr=newest,fsname=mergerfs-torrents 0 0 
+/mnt/disks/SG_BARR_8TB_01/@public:/mnt/disks/SG_BARR_8TB_02/@public:/mnt/disks/SG_BARR_8TB_03/@public /mnt/public fuse.mergerfs cache.files=off,dropcacheonclose=false,category.create=pfrd,func.getattr=newest,fsname=mergerfs-public 0 0 
+/mnt/disks/SG_BARR_8TB_01/@torrents:/mnt/disks/SG_BARR_8TB_02/@torrents:/mnt/disks/SG_BARR_8TB_03/@torrents:/mnt/disks/WD_RED_4TB_01/@torrents /mnt/torrents2 fuse.mergerfs cache.files=off,dropcacheonclose=false,category.create=pfrd,func.getattr=newest,fsname=mergerfs-torrents 0 0 
 #/mnt/disks/SG_BARR_8TB_01/@meagan:/mnt/disks/SG_BARR_8TB_02/@meagan:/mnt/disks/SG_BARR_8TB_03/@meagan:/mnt/disks/WD_RED_8TB_01/@meagan /mnt/meagan fuse.mergerfs cache.files=off,dropcacheonclose=false,category.create=mspmfs,func.getattr=newest,fsname=mergerfs-meagan 0 0 
 #/mnt/disks/SG_BARR_8TB_01/@tyler:/mnt/disks/SG_BARR_8TB_02/@tyler:/mnt/disks/SG_BARR_8TB_03/@tyler:/mnt/disks/WD_RED_8TB_01/@tyler /mnt/tyler fuse.mergerfs cache.files=off,dropcacheonclose=false,category.create=mspmfs,func.getattr=newest,fsname=mergerfs-tyler 0 0 
