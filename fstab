@@ -42,6 +42,7 @@ LABEL=BTRFS_RAID_BACKUP /mnt/raid_backup btrfs noauto,rw,relatime,compress=zstd,
 #UUID=611f9b40-773a-4fc1-82a0-9e104924fee7 /mnt/meagan btrfs rw,relatime,subvol=/@meagan,compress=zstd,autodefrag,nofail 0 0
 
 # WD RED 4TB 01
+# 68N32N0
 UUID=453ccc0d-2f99-44a5-9f75-a8e097b26a7c /mnt/disks/WD_RED_4TB_01 btrfs rw,relatime,compress=zstd,autodefrag,nofail 0 0
 #UUID=453ccc0d-2f99-44a5-9f75-a8e097b26a7c /mnt/tyler btrfs rw,relatime,subvol=@tyler,compress=zstd,autodefrag,nofail 0 0
 UUID=453ccc0d-2f99-44a5-9f75-a8e097b26a7c /mnt/timemachine btrfs rw,relatime,subvol=@timemachine,compress=zstd,autodefrag,nofail 0 0
@@ -50,14 +51,24 @@ UUID=453ccc0d-2f99-44a5-9f75-a8e097b26a7c /mnt/backups btrfs rw,relatime,subvol=
 #UUID=453ccc0d-2f99-44a5-9f75-a8e097b26a7c /mnt/meagan btrfs rw,relatime,subvol=@meagan,compress=zstd,autodefrag,nofail 0 0
 
 # Seagate Barracuda 8TB 01
+# 2U9188_ZR153319
 UUID=93939840-2d42-4530-accb-af8a170003de /mnt/disks/SG_BARR_8TB_01 btrfs rw,relatime,compress=zstd,autodefrag,nofail 0 0
 #UUID=93939840-2d42-4530-accb-af8a170003de /mnt/meagan btrfs rw,relatime,subvol=@meagan,compress=zstd,autodefrag,nofail 0 0
 
 # Segeate Barracuda 8TB 02
+# 2CX188_ZR11E2CH
 UUID=591931a6-b432-4bf4-b06e-81f7dd00a356 /mnt/disks/SG_BARR_8TB_02 btrfs rw,relatime,compress=zstd,autodefrag,nofail 0 0
 
 # Seagate Barracuda 8TB 03
+# 2CX188_ZCT275VD
 UUID=634f6d42-2bfa-4afd-ba76-e561fcb3dd12 /mnt/disks/SG_BARR_8TB_03 btrfs rw,relatime,compress=zstd,autodefrag,nofail 0 0
+
+# Seagate Barracuda 8TB 04
+# 2CX188_ZR13KRN2
+# UUID= /mnt/disks/SG_BARR_8TB_04 btrfs rw,relatime,compress=zstd,autodefrag,nofail 0 0
+# UUID= /mnt/timemachine btrfs rw,relatime,subvol=@timemachine,compress=zstd,autodefrag,nofail 0 0
+# UUID= /mnt/backups btrfs rw,relatime,subvol=@backups,compress=zstd,autodefrag,nofail 0 0
+
 
 # MergerFS
 /mnt/disks/SG_BARR_8TB_01/@public:/mnt/disks/SG_BARR_8TB_02/@public:/mnt/disks/SG_BARR_8TB_03/@public /mnt/public fuse.mergerfs cache.files=off,dropcacheonclose=false,category.create=pfrd,func.getattr=newest,fsname=mergerfs-public 0 0 
