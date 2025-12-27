@@ -69,6 +69,10 @@ UUID=634f6d42-2bfa-4afd-ba76-e561fcb3dd12 /mnt/disks/SG_BARR_8TB_03 btrfs rw,rel
 # UUID= /mnt/timemachine btrfs rw,relatime,subvol=@timemachine,compress=zstd,autodefrag,nofail 0 0
 # UUID= /mnt/backups btrfs rw,relatime,subvol=@backups,compress=zstd,autodefrag,nofail 0 0
 
+# Seagate Barracuda 8TB 05
+# 
+# UUID= /mnt/disks/SG_BARR_8TB_04 btrfs rw,relatime,compress=zstd,autodefrag,nofail 0 0
+# UUID= /mnt/backups btrfs rw,relatime,subvol=@backups,compress=zstd,autodefrag,nofail 0 0
 
 # MergerFS
 /mnt/disks/SG_BARR_8TB_01/@public:/mnt/disks/SG_BARR_8TB_02/@public:/mnt/disks/SG_BARR_8TB_03/@public /mnt/public fuse.mergerfs cache.files=off,dropcacheonclose=false,category.create=pfrd,func.getattr=newest,fsname=mergerfs-public 0 0 
