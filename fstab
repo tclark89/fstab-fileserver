@@ -32,15 +32,6 @@ UUID=07956823-71e6-4573-8319-2e8f2fa9baf4 none            swap    sw            
 # BTRFS RAID Backup
 LABEL=BTRFS_RAID_BACKUP /mnt/raid_backup btrfs noauto,rw,relatime,compress=zstd,autodefrag,nofail 0 0
 
-# WD RED 4TB 01
-# 68N32N0
-#UUID=453ccc0d-2f99-44a5-9f75-a8e097b26a7c /mnt/disks/WD_RED_4TB_01 btrfs rw,relatime,compress=zstd,autodefrag,nofail 0 0
-#UUID=453ccc0d-2f99-44a5-9f75-a8e097b26a7c /mnt/tyler btrfs rw,relatime,subvol=@tyler,compress=zstd,autodefrag,nofail 0 0
-#UUID=453ccc0d-2f99-44a5-9f75-a8e097b26a7c /mnt/timemachine btrfs rw,relatime,subvol=@timemachine,compress=zstd,autodefrag,nofail 0 0
-#UUID=453ccc0d-2f99-44a5-9f75-a8e097b26a7c /mnt/backups btrfs rw,relatime,subvol=@backups,compress=zstd,autodefrag,nofail 0 0
-#UUID=453ccc0d-2f99-44a5-9f75-a8e097b26a7c /mnt/torrents btrfs rw,relatime,subvol=@torrents,compress=zstd,autodefrag,nofail 0 0
-#UUID=453ccc0d-2f99-44a5-9f75-a8e097b26a7c /mnt/meagan btrfs rw,relatime,subvol=@meagan,compress=zstd,autodefrag,nofail 0 0
-
 # Seagate Barracuda 8TB 01
 # 2U9188_ZR153319
 UUID=93939840-2d42-4530-accb-af8a170003de /mnt/disks/SG_BARR_8TB_01 btrfs rw,relatime,compress=zstd,autodefrag,nofail 0 0
@@ -57,17 +48,14 @@ UUID=634f6d42-2bfa-4afd-ba76-e561fcb3dd12 /mnt/disks/SG_BARR_8TB_03 btrfs rw,rel
 # Seagate Barracuda 8TB 04
 # 2CX188_ZR13KRN2
 UUID=453ccc0d-2f99-44a5-9f75-a8e097b26a7c /mnt/disks/SG_BARR_8TB_04 btrfs rw,relatime,compress=zstd,autodefrag,nofail 0 0
+UUID=453ccc0d-2f99-44a5-9f75-a8e097b26a7c /mnt/tyler btrfs rw,relatime,subvol=@tyler,compress=zstd,autodefrag,nofail 0 0
+UUID=453ccc0d-2f99-44a5-9f75-a8e097b26a7c /mnt/meagan btrfs rw,relatime,subvol=@meagan,compress=zstd,autodefrag,nofail 0 0
 UUID=453ccc0d-2f99-44a5-9f75-a8e097b26a7c /mnt/timemachine btrfs rw,relatime,subvol=@timemachine,compress=zstd,autodefrag,nofail 0 0
 UUID=453ccc0d-2f99-44a5-9f75-a8e097b26a7c /mnt/backups btrfs rw,relatime,subvol=@backups,compress=zstd,autodefrag,nofail 0 0
 
 
-# Seagate Barracuda 8TB 05
-# 
-# UUID= /mnt/disks/SG_BARR_8TB_04 btrfs rw,relatime,compress=zstd,autodefrag,nofail 0 0
-# UUID= /mnt/backups btrfs rw,relatime,subvol=@backups,compress=zstd,autodefrag,nofail 0 0
-
 # MergerFS
 /mnt/disks/SG_BARR_8TB_01/@public:/mnt/disks/SG_BARR_8TB_02/@public:/mnt/disks/SG_BARR_8TB_03/@public:/mnt/disks/SG_BARR_8TB_04/@public /mnt/public fuse.mergerfs cache.files=off,dropcacheonclose=false,category.create=pfrd,func.getattr=newest,fsname=mergerfs-public 0 0 
 /mnt/disks/SG_BARR_8TB_01/@torrents:/mnt/disks/SG_BARR_8TB_02/@torrents:/mnt/disks/SG_BARR_8TB_03/@torrents:/mnt/disks/SG_BARR_8TB_04/@torrents /mnt/torrents fuse.mergerfs cache.files=off,dropcacheonclose=false,category.create=pfrd,func.getattr=newest,fsname=mergerfs-torrents 0 0 
-/mnt/disks/SG_BARR_8TB_01/@meagan:/mnt/disks/SG_BARR_8TB_02/@meagan:/mnt/disks/SG_BARR_8TB_03/@meagan:/mnt/disks/SG_BARR_8TB_04/@meagan /mnt/meagan fuse.mergerfs cache.files=off,dropcacheonclose=false,category.create=pfrd,func.getattr=newest,fsname=mergerfs-meagan 0 0 
-/mnt/disks/SG_BARR_8TB_01/@tyler:/mnt/disks/SG_BARR_8TB_02/@tyler:/mnt/disks/SG_BARR_8TB_03/@tyler:/mnt/disks/SG_BARR_8TB_04/@tyler /mnt/tyler fuse.mergerfs cache.files=off,dropcacheonclose=false,category.create=pfrd,func.getattr=newest,fsname=mergerfs-tyler 0 0 
+#/mnt/disks/SG_BARR_8TB_01/@meagan:/mnt/disks/SG_BARR_8TB_02/@meagan:/mnt/disks/SG_BARR_8TB_03/@meagan:/mnt/disks/SG_BARR_8TB_04/@meagan /mnt/meagan fuse.mergerfs cache.files=off,dropcacheonclose=false,category.create=pfrd,func.getattr=newest,fsname=mergerfs-meagan 0 0 
+#/mnt/disks/SG_BARR_8TB_01/@tyler:/mnt/disks/SG_BARR_8TB_02/@tyler:/mnt/disks/SG_BARR_8TB_03/@tyler:/mnt/disks/SG_BARR_8TB_04/@tyler /mnt/tyler fuse.mergerfs cache.files=off,dropcacheonclose=false,category.create=pfrd,func.getattr=newest,fsname=mergerfs-tyler 0 0 
