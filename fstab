@@ -50,9 +50,13 @@ UUID=453ccc0d-2f99-44a5-9f75-a8e097b26a7c /mnt/disks/SG_BARR_8TB_04 btrfs rw,rel
 UUID=453ccc0d-2f99-44a5-9f75-a8e097b26a7c /mnt/timemachine btrfs rw,relatime,subvol=@timemachine,compress=zstd,autodefrag,nofail 0 0
 UUID=453ccc0d-2f99-44a5-9f75-a8e097b26a7c /mnt/backups btrfs rw,relatime,subvol=@backups,compress=zstd,autodefrag,nofail 0 0
 
+# Seagate Barracuda 8TB 05
+# 2U9188_ZR11XA8D
+UUID=d8a51dc0-165c-46ec-8976-6af1c7bfab03 /mnt/disks/SG_BARR_8TB_05 btrfs rw,relatime,compress=zstd,autodefrag,nofail 0 0
+
 
 # MergerFS
-/mnt/disks/SG_BARR_8TB_01/@public:/mnt/disks/SG_BARR_8TB_02/@public:/mnt/disks/SG_BARR_8TB_03/@public:/mnt/disks/SG_BARR_8TB_04/@public /mnt/public fuse.mergerfs cache.files=off,dropcacheonclose=false,category.create=pfrd,func.getattr=newest,fsname=mergerfs-public 0 0 
-/mnt/disks/SG_BARR_8TB_01/@torrents:/mnt/disks/SG_BARR_8TB_02/@torrents:/mnt/disks/SG_BARR_8TB_03/@torrents:/mnt/disks/SG_BARR_8TB_04/@torrents /mnt/torrents fuse.mergerfs cache.files=off,dropcacheonclose=false,category.create=pfrd,func.getattr=newest,fsname=mergerfs-torrents 0 0 
-/mnt/disks/SG_BARR_8TB_01/@meagan:/mnt/disks/SG_BARR_8TB_02/@meagan:/mnt/disks/SG_BARR_8TB_03/@meagan:/mnt/disks/SG_BARR_8TB_04/@meagan /mnt/meagan fuse.mergerfs cache.files=off,dropcacheonclose=false,category.create=pfrd,func.getattr=newest,fsname=mergerfs-meagan 0 0 
-/mnt/disks/SG_BARR_8TB_01/@tyler:/mnt/disks/SG_BARR_8TB_02/@tyler:/mnt/disks/SG_BARR_8TB_03/@tyler:/mnt/disks/SG_BARR_8TB_04/@tyler /mnt/tyler fuse.mergerfs cache.files=off,dropcacheonclose=false,category.create=pfrd,func.getattr=newest,fsname=mergerfs-tyler 0 0 
+/mnt/disks/SG_BARR_8TB_01/@public:/mnt/disks/SG_BARR_8TB_02/@public:/mnt/disks/SG_BARR_8TB_03/@public:/mnt/disks/SG_BARR_8TB_04/@public:/mnt/disks/SG_BARR_8TB_05/@public /mnt/public fuse.mergerfs cache.files=off,dropcacheonclose=false,category.create=pfrd,func.getattr=newest,fsname=mergerfs-public 0 0 
+/mnt/disks/SG_BARR_8TB_01/@torrents:/mnt/disks/SG_BARR_8TB_02/@torrents:/mnt/disks/SG_BARR_8TB_03/@torrents:/mnt/disks/SG_BARR_8TB_04/@torrents:/mnt/disks/SG_BARR_8TB_05/@torrents /mnt/torrents fuse.mergerfs cache.files=off,dropcacheonclose=false,category.create=pfrd,func.getattr=newest,fsname=mergerfs-torrents 0 0 
+/mnt/disks/SG_BARR_8TB_01/@meagan:/mnt/disks/SG_BARR_8TB_02/@meagan:/mnt/disks/SG_BARR_8TB_03/@meagan:/mnt/disks/SG_BARR_8TB_04/@meagan:/mnt/disks/SG_BARR_8TB_05/@meagan /mnt/meagan fuse.mergerfs cache.files=off,dropcacheonclose=false,category.create=pfrd,func.getattr=newest,fsname=mergerfs-meagan 0 0 
+/mnt/disks/SG_BARR_8TB_01/@tyler:/mnt/disks/SG_BARR_8TB_02/@tyler:/mnt/disks/SG_BARR_8TB_03/@tyler:/mnt/disks/SG_BARR_8TB_04/@tyler:/mnt/disks/SG_BARR_8TB_05/@tyler /mnt/tyler fuse.mergerfs cache.files=off,dropcacheonclose=false,category.create=pfrd,func.getattr=newest,fsname=mergerfs-tyler 0 0 
