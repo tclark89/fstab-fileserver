@@ -27,11 +27,7 @@ UUID=07956823-71e6-4573-8319-2e8f2fa9baf4 none            swap    sw            
 
 /dev/sr0        /media/cdrom0   udf,iso9660 user,noauto     0       0
 
-
-
-# BTRFS RAID Backup
-LABEL=BTRFS_RAID_BACKUP /mnt/raid_backup btrfs noauto,rw,relatime,compress=zstd,autodefrag,nofail 0 0
-
+### Data Disk Mounts ###
 # Seagate Barracuda 8TB 01
 # 2U9188_ZR153319
 UUID=93939840-2d42-4530-accb-af8a170003de /mnt/disks/SG_BARR_8TB_01 btrfs rw,relatime,compress=zstd,autodefrag,nofail 0 0
@@ -50,7 +46,7 @@ UUID=d8a51dc0-165c-46ec-8976-6af1c7bfab03 /mnt/disks/SG_BARR_8TB_04 btrfs rw,rel
 
 # Seagate Barracuda 8TB 05
 # 2CX188_ZR13KRN2
-UUID=26e34c64-a61f-49b9-bc6f-28af9da328dc /mnt/disks/SG_BARR_8TB_05 btrfs rw,relatime,compress=zstd,autodefrag,nofail 0 0
+#UUID=26e34c64-a61f-49b9-bc6f-28af9da328dc /mnt/disks/SG_BARR_8TB_05 btrfs rw,relatime,compress=zstd,autodefrag,nofail 0 0
 
 # WD Red 4TB 01
 # 68N32N0
@@ -60,6 +56,17 @@ UUID=453ccc0d-2f99-44a5-9f75-a8e097b26a7c /mnt/backups btrfs rw,relatime,subvol=
 UUID=453ccc0d-2f99-44a5-9f75-a8e097b26a7c /mnt/meagan btrfs rw,relatime,subvol=@meagan,compress=zstd,autodefrag,nofail 0 0
 UUID=453ccc0d-2f99-44a5-9f75-a8e097b26a7c /mnt/tyler btrfs rw,relatime,subvol=@tyler,compress=zstd,autodefrag,nofail 0 0
 
-# MergerFS
+
+### MergerFS Pools ###
 /mnt/disks/SG_BARR_8TB_01/@public:/mnt/disks/SG_BARR_8TB_02/@public:/mnt/disks/SG_BARR_8TB_03/@public:/mnt/disks/SG_BARR_8TB_04/@public /mnt/public fuse.mergerfs cache.files=off,dropcacheonclose=false,category.create=pfrd,func.getattr=newest,fsname=mergerfs-public 0 0 
 /mnt/disks/SG_BARR_8TB_01/@torrents:/mnt/disks/SG_BARR_8TB_02/@torrents:/mnt/disks/SG_BARR_8TB_03/@torrents:/mnt/disks/SG_BARR_8TB_04/@torrents /mnt/torrents fuse.mergerfs cache.files=off,dropcacheonclose=false,category.create=pfrd,func.getattr=newest,fsname=mergerfs-torrents 0 0 
+
+### Backup Drives ###
+# BTRFS RAID Backup
+LABEL=BTRFS_RAID_BACKUP /mnt/raid_backup btrfs noauto,rw,relatime,compress=zstd,autodefrag,nofail 0 0
+
+# Public Backup
+LABEL=PUBLIC_BACKUP /mnt/public_backup btrfs noauto,rw,relatime,compress=zstd,autodefrag,nofail 0 0
+# Personal Files Backup
+# Pool A: 2CX188_ZR13KRN2
+LABEL=PERSONAL_BACKUP /mnt/personal_backup btrfs noauto,rw,relatime,compress=zstd,autodefrag,nofail 0 0
