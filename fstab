@@ -70,6 +70,6 @@ LABEL=BTRFS_RAID_BACKUP /mnt/raid_backup btrfs noauto,rw,relatime,compress=zstd,
 # Pool B:
 LABEL=PUBLIC_BACKUP /mnt/public_backup btrfs noauto,rw,relatime,compress=zstd,autodefrag,nofail 0 0
 # Personal Files Backup
-# Pool A:
-# Pool B: 2CX188_ZR13KRN2
+# Pool A: 2CX188_ZR13KRN2
+# Pool B: 
 LABEL=PERSONAL_BACKUP /mnt/personal_backup btrfs noauto,rw,relatime,compress=zstd,autodefrag,nofail 0 0
