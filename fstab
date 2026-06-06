@@ -66,10 +66,10 @@ UUID=453ccc0d-2f99-44a5-9f75-a8e097b26a7c /mnt/tyler btrfs rw,relatime,subvol=@t
 LABEL=BTRFS_RAID_BACKUP /mnt/raid_backup btrfs noauto,rw,relatime,compress=zstd,autodefrag,nofail 0 0
 
 # Public Backup
-# Pool A:
+# Pool A: 3WE103_ZXA0GZHZ
 # Pool B:
 LABEL=PUBLIC_BACKUP /mnt/public_backup btrfs noauto,rw,relatime,compress=zstd,autodefrag,nofail 0 0
 # Personal Files Backup
-# Pool A: 2CX188_ZR13KRN2
-# Pool B: 
+# Pool A: 2CX188_ZR10D9R7
+# Pool B: 2CX188_ZR10V7W0
 LABEL=PERSONAL_BACKUP /mnt/personal_backup btrfs noauto,rw,relatime,compress=zstd,autodefrag,nofail 0 0
