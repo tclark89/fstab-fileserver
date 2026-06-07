@@ -44,12 +44,13 @@ UUID=634f6d42-2bfa-4afd-ba76-e561fcb3dd12 /mnt/disks/SG_BARR_8TB_03 btrfs rw,rel
 # 2U9188_ZR11XA8D
 UUID=d8a51dc0-165c-46ec-8976-6af1c7bfab03 /mnt/disks/SG_BARR_8TB_04 btrfs rw,relatime,compress=zstd,autodefrag,nofail 0 0
 
-# Seagate Barracuda 8TB 05
-# 2CX188_ZR13KRN2
-#UUID=26e34c64-a61f-49b9-bc6f-28af9da328dc /mnt/disks/SG_BARR_8TB_05 btrfs rw,relatime,compress=zstd,autodefrag,nofail 0 0
+# WD Red 2TB 01
+# WCC4M4RU24VL
+UUID=6be14a94-044f-48ff-929d-0cbb37efa276 /mnt/disks/WD_RED_2TB_01 btrfs rw,relatime,compress=zstd,autodefrag,nofail 0 0
+# UUID=6be14a94-044f-48ff-929d-0cbb37efa276 /mnt/timemachine btrfs rw,relatime,subvol=@timemachine,compress=zstd,autodefrag,nofail 0 0
 
 # WD Red 4TB 01
-# 68N32N0
+# WCC7K5KY75T9
 UUID=453ccc0d-2f99-44a5-9f75-a8e097b26a7c /mnt/disks/WD_RED_4TB_01 btrfs rw,relatime,compress=zstd,autodefrag,nofail 0 0
 UUID=453ccc0d-2f99-44a5-9f75-a8e097b26a7c /mnt/timemachine btrfs rw,relatime,subvol=@timemachine,compress=zstd,autodefrag,nofail 0 0
 UUID=453ccc0d-2f99-44a5-9f75-a8e097b26a7c /mnt/backups btrfs rw,relatime,subvol=@backups,compress=zstd,autodefrag,nofail 0 0
@@ -71,5 +72,5 @@ LABEL=BTRFS_RAID_BACKUP /mnt/raid_backup btrfs noauto,rw,relatime,compress=zstd,
 LABEL=PUBLIC_BACKUP /mnt/public_backup btrfs noauto,rw,relatime,compress=zstd,autodefrag,nofail 0 0
 # Personal Files Backup
 # Pool A: 2CX188_ZR10D9R7
-# Pool B: 2CX188_ZR10V7W0
+# Pool B: 2CX188_ZR13KRN2
 LABEL=PERSONAL_BACKUP /mnt/personal_backup btrfs noauto,rw,relatime,compress=zstd,autodefrag,nofail 0 0
